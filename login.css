@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+body{
+    width:100vw;
+    height:100vh;
+    
+    background:linear-gradient(to bottom, #3B2A19, #E8D8C2);
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width:40%;
+    height:70%;
+    background-color:rgba(244, 232, 196, 0.2);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index:1;
+    border-radius: 40px;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.2);
+    animation:1.5s ease-in 0s normal  moving;
+}
+h2{
+    color:rgb(0, 0, 0);
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-size:2em;
+}
+.form-group{
+    position: relative;
+    border-bottom:3px solid black;
+    margin:30px 0;
+}
+.form-group input{
+    width:100%;
+    height:50px;
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size:0.9rem;
+    color:rgb(0, 0, 0);
+    padding:0 30px 0 10px;
+}
+.form-group label{
+    position: absolute;
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+    font-size:1rem;
+    color:rgb(0, 0, 0);
+    transition: 0.5s;
+}
+input:focus~label,
+input:valid~label{
+    top:-5px;
+}
+.form-group i{
+    position:absolute;
+    top:50%;
+    right:5px;
+    transform:translateY(-50%);
+    color:rgb(0, 0, 0);
+    font-size:1.2em;  
+}
+.form-group i:hover{
+    color:white;
+    transition:0.5s;
+}
+p{
+    text-align:center;
+    color:#000000;
+    padding:10px 0;
+}
+p>a{
+    color:black;
+    text-decoration: none;
+    font-weight:600;
+}
+p>a:hover{
+    text-decoration: underline;
+    font-style:italic;
+    color: black;
+}
+#btn{
+    width:100%;
+    height:50px;
+    border-radius:40px;
+    border:none;
+    font-size: 1.5em;
+    background-color: rgb(191, 183, 183);
+    text-transform: uppercase;
+    font-weight:600;
+    margin:10px 0;
+    cursor:pointer;
+    transition: 0.5s;
+}
+#btn:hover{
+    background: rgba(0,0,0,0.1);
+    color:#fff;
+}
+
+
+@keyframes moving{
+    from{
+        transform:translateX(150vh);
+    }
+    to{
+        transform:translateX(0);
+    }
+}
